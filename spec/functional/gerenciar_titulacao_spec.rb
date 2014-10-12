@@ -12,5 +12,14 @@ feature 'gerenciar Titulacao' do
 
   end
 
+scenario 'alterar Titulacao' do#, :js => true  do
+
+    titulacao = FactoryGirl.create(:titulacao)
+
+    visit edit_titulacao_path(titulacao)
+
+    preencher_e_verificar_titulacao
+
+  end
 
 end
