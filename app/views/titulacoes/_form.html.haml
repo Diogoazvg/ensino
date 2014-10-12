@@ -1,7 +1,7 @@
 = form_for @titulacao do |f|
   - if @titulacao.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@titulacao.errors.count, "error")} prohibited this titulacao from being saved:"
+      %h2= "#{pluralize(@titulacao.errors.count, "error")} nao pode salvar, corrija os erros"
       %ul
         - @titulacao.errors.full_messages.each do |msg|
           %li= msg
