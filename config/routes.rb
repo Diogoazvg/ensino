@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :producao_cientificas
+
   resources :titulacoes
 
   resources :professores

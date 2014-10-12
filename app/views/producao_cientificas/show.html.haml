@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Artigo:
+  = @producao_cientifica.artigo
+%p
+  %b Monografia:
+  = @producao_cientifica.monografia
+
+= link_to 'Edit', edit_producao_cientifica_path(@producao_cientifica)
+\|
+= link_to 'Back', producao_cientificas_path

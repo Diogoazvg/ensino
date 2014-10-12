@@ -1,0 +1,21 @@
+%h1 Listing producao_cientificas
+
+%table
+  %tr
+    %th Artigo
+    %th Monografia
+    %th
+    %th
+    %th
+
+  - @producao_cientificas.each do |producao_cientifica|
+    %tr
+      %td= producao_cientifica.artigo
+      %td= producao_cientifica.monografia
+      %td= link_to 'Show', producao_cientifica
+      %td= link_to 'Edit', edit_producao_cientifica_path(producao_cientifica)
+      %td= link_to 'Destroy', producao_cientifica, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Producao cientifica', new_producao_cientifica_path
