@@ -22,4 +22,14 @@ scenario 'alterar Titulacao' do#, :js => true  do
 
   end
 
+scenario 'excluir titulacao' do #, :js => true do
+
+    titulacao = FactoryGirl.create(:titulacao)
+
+    visit titulacoes_path
+
+    click_link 'Excluir'
+
+  end
+
 end
