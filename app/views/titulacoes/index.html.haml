@@ -3,7 +3,7 @@
 %table
   %tr
     %th Mestre
-    %th Pos graduado
+    %th Pos
     %th Doutor
     %th
     %th
@@ -12,7 +12,7 @@
   - @titulacoes.each do |titulacao|
     %tr
       %td= titulacao.mestre
-      %td= titulacao.pos_graduado
+      %td= titulacao.pos
       %td= titulacao.doutor
       %td= link_to 'Show', titulacao
       %td= link_to 'Edit', edit_titulacao_path(titulacao)

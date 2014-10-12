@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :titulacao do
     mestre "MyString"
-    pos_graduado "MyString"
+    pos "MyString"
     doutor "MyString"
   end
 end

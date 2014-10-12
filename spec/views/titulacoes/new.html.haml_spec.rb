@@ -4,7 +4,7 @@ RSpec.describe "titulacoes/new", :type => :view do
   before(:each) do
     assign(:titulacao, Titulacao.new(
       :mestre => "MyString",
-      :pos_graduado => "MyString",
+      :pos => "MyString",
       :doutor => "MyString"
     ))
   end
@@ -16,7 +16,7 @@ RSpec.describe "titulacoes/new", :type => :view do
 
       assert_select "input#titulacao_mestre[name=?]", "titulacao[mestre]"
 
-      assert_select "input#titulacao_pos_graduado[name=?]", "titulacao[pos_graduado]"
+      assert_select "input#titulacao_pos[name=?]", "titulacao[pos]"
 
       assert_select "input#titulacao_doutor[name=?]", "titulacao[doutor]"
     end

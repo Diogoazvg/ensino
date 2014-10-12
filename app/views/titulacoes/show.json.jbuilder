@@ -1,1 +1,1 @@
-json.extract! @titulacao, :id, :mestre, :pos_graduado, :doutor, :created_at, :updated_at
+json.extract! @titulacao, :id, :mestre, :pos, :doutor, :created_at, :updated_at
