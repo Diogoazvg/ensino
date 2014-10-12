@@ -1,0 +1,23 @@
+%h1 Listing titulacoes
+
+%table
+  %tr
+    %th Mestre
+    %th Pos graduado
+    %th Doutor
+    %th
+    %th
+    %th
+
+  - @titulacoes.each do |titulacao|
+    %tr
+      %td= titulacao.mestre
+      %td= titulacao.pos_graduado
+      %td= titulacao.doutor
+      %td= link_to 'Show', titulacao
+      %td= link_to 'Edit', edit_titulacao_path(titulacao)
+      %td= link_to 'Excluir', titulacao, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Titulacao', new_titulacao_path

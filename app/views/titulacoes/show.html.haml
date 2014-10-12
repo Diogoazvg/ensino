@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Mestre:
+  = @titulacao.mestre
+%p
+  %b Pos graduado:
+  = @titulacao.pos_graduado
+%p
+  %b Doutor:
+  = @titulacao.doutor
+
+= link_to 'Edit', edit_titulacao_path(@titulacao)
+\|
+= link_to 'Back', titulacoes_path

@@ -1,0 +1,19 @@
+= form_for @titulacao do |f|
+  - if @titulacao.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@titulacao.errors.count, "error")} prohibited this titulacao from being saved:"
+      %ul
+        - @titulacao.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :mestre
+    = f.text_field :mestre
+  .field
+    = f.label :pos_graduado
+    = f.text_field :pos_graduado
+  .field
+    = f.label :doutor
+    = f.text_field :doutor
+  .actions
+    = f.submit 'Salvar'
