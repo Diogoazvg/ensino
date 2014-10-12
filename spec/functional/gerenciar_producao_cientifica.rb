@@ -21,5 +21,15 @@ feature 'gerenciar Producao_cientifica' do
     preencher_e_verificar_producao_cientifica
 
   end
+
+  scenario 'excluir producao_cientifica' do #, :js => true do
+
+       producao_cientifica = FactoryGirl.create(:producao_cientifica)
+
+        visit producao_cientificas_path
+
+        click_link 'Excluir'
+
+  end
   
 end
