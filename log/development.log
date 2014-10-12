@@ -159,3 +159,80 @@ Processing by TitulacoesController#show as HTML
   [1m[35mTitulacao Load (0.6ms)[0m  SELECT  "titulacoes".* FROM "titulacoes"  WHERE "titulacoes"."id" = $1 LIMIT 1  [["id", 1]]
   Rendered titulacoes/show.html.haml within layouts/application (2.5ms)
 Completed 200 OK in 79ms (Views: 75.9ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProducaoCientificas (20141012042106)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (113.1ms)[0m  [1mCREATE TABLE "producao_cientificas" ("id" serial primary key, "artigo" character varying(255), "monografia" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141012042106"]]
+  [1m[36m (14.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProfessorProducaoCientificaJoinTable (20141012044701)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProfessorProducaoCientificaJoinTable (20141012044701)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "professores_producao_cientificas" ("professor_id" integer, "producao_cientifica_id" integer) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141012044701"]]
+  [1m[36m (33.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (15.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (63.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProfessores (20141012001537)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (102.0ms)[0m  [1mCREATE TABLE "professores" ("id" serial primary key, "nome" character varying(255), "cpf" integer, "telefone" integer, "endereco" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141012001537"]]
+  [1m[36m (14.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProfessorTitulacaoJoinTable (20141012024606)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "professores_titulacoes" ("professor_id" integer, "titulacao_id" integer) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141012024606"]]
+  [1m[36m (5.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTitulacoes (20141012031316)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (97.4ms)[0m  [1mCREATE TABLE "titulacoes" ("id" serial primary key, "mestre" character varying(255), "pos" character varying(255), "doutor" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141012031316"]]
+  [1m[36m (19.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProducaoCientificas (20141012042106)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (86.9ms)[0m  [1mCREATE TABLE "producao_cientificas" ("id" serial primary key, "artigo" character varying(255), "monografia" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141012042106"]]
+  [1m[36m (18.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProfessorProducaoCientificaJoinTable (20141012044701)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProducaoCientificaProfessorJoinTable (20141012050850)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141012050850"]]
+  [1m[35m (10.3ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (12.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (86.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProfessores (20141012001537)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (74.0ms)[0m  [1mCREATE TABLE "professores" ("id" serial primary key, "nome" character varying(255), "cpf" integer, "telefone" integer, "endereco" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141012001537"]]
+  [1m[36m (13.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProfessorTitulacaoJoinTable (20141012024606)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "professores_titulacoes" ("professor_id" integer, "titulacao_id" integer) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141012024606"]]
+  [1m[36m (4.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTitulacoes (20141012031316)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (81.0ms)[0m  [1mCREATE TABLE "titulacoes" ("id" serial primary key, "mestre" character varying(255), "pos" character varying(255), "doutor" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141012031316"]]
+  [1m[36m (13.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProducaoCientificas (20141012042106)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (81.1ms)[0m  [1mCREATE TABLE "producao_cientificas" ("id" serial primary key, "artigo" character varying(255), "monografia" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141012042106"]]
+  [1m[36m (12.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProducaoCientificaProfessorJoinTable (20141012050850)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "producao_cientificas_professores" ("professor_id" integer, "producao_cientifica_id" integer) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141012050850"]]
+  [1m[36m (6.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
