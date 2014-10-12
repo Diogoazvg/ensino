@@ -10,9 +10,16 @@ feature 'gerenciar Producao_cientifica' do
 
     preencher_e_verificar_producao_cientifica
 
-
-
   end
 
+  scenario 'alterar Producao_cientifica' do#, :js => true  do
+
+    producao_cientifica = FactoryGirl.create(:producao_cientifica)
+
+    visit edit_producao_cientifica_path(producao_cientifica)
+
+    preencher_e_verificar_producao_cientifica
+
+  end
   
 end
