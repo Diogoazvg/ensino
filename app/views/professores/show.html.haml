@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @professor.nome
+%p
+  %b Cpf:
+  = @professor.cpf
+%p
+  %b Telefone:
+  = @professor.telefone
+%p
+  %b Endereco:
+  = @professor.endereco
+
+= link_to 'Edit', edit_professor_path(@professor)
+\|
+= link_to 'Back', professores_path
