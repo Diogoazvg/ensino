@@ -31,5 +31,17 @@ feature 'gerenciar Producao_cientifica' do
         click_link 'Excluir'
 
   end
+
+  def preencher_e_verificar_producao_cientifica
+
+      fill_in 'Artigo',  :with => "Artigo"
+      fill_in 'Monografia',  :with => "Monografia"
+
+      click_button 'Salvar'
+
+      expect(page).to have_content 'Artigo: Artigo'
+      expect(page).to have_content 'Monografia: Monografia'
+
+   end
   
 end
