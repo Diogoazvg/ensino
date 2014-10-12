@@ -32,4 +32,17 @@ scenario 'excluir titulacao' do #, :js => true do
 
   end
 
+    def preencher_e_verificar_titulacao
+
+      fill_in 'Mestre',  :with => "Titulacao"
+      fill_in 'Pos_graduado',  :with => "Pos_graduado"
+      fill_in 'Doutor',  :with => "Doutor"
+
+      click_button 'Salvar'
+
+      expect(page).to have_content 'Mestre: Mestre'
+      expect(page).to have_content 'Pos_graduado: Pos_graduado'
+      expect(page).to have_content 'Doutor: Doutor'
+    end  
+
 end
