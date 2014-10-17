@@ -26,13 +26,13 @@ feature 'gerenciar Professor' do
 
   end
 
-   scenario 'excluir professor' do #, :js => true do
+  scenario 'excluir professor' do #, :js => true do
 
-       professor = FactoryGirl.create(:professor)
+    professor = FactoryGirl.create(:professor)
 
-        visit professores_path
+    visit professores_path
 
-        click_link 'Excluir'
+    click_link 'Excluir'
 
 
 
