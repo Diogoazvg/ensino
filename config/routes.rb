@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'home/index'
+  root :to=>"home#index"
   resources :producao_cientificas
 
   resources :titulacoes
